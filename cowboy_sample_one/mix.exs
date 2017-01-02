@@ -14,7 +14,8 @@ defmodule CowboySampleOne.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :cowboy],
+    mod: {CowboySampleOne, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +28,8 @@ defmodule CowboySampleOne.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:cowboy, "~> 1.0.4"}
+    ]
   end
 end
