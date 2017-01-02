@@ -1,0 +1,2 @@
+defmodule CowboySampleOne do
+end
